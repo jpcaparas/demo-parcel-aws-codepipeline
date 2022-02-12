@@ -1,0 +1,24 @@
+version: 0.1
+
+env:
+  variables:
+    NODE_ENV: "production"
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - npm install -g yarn
+      - yarn
+  build:
+    commands:
+      - echo "Building files..."
+      - yarn build
+  post_build:
+    commands:
+      - echo "Running post-build..."
+      - aws s3 rm s3://$S3_BUCKET --recursive
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist'

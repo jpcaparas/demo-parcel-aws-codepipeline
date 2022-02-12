@@ -1,0 +1,16 @@
+{
+  "name": "jpcaparas-com",
+  "version": "0.0.1",
+  "description": "The personal website of JP Caparas, pointing to jpcaparas.com",
+  "repository": "ssh://git-codecommit.ap-southeast-2.amazonaws.com/v1/repos/jpcaparas-com",
+  "author": "JP <jp@jpcaparas.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+      "start": "parcel src/index.html",
+      "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  }
+}
